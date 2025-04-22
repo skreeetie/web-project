@@ -17,6 +17,10 @@ module.exports = {
   // Source maps для удобства отладки
   devtool: "source-map",
 
+  devServer: {
+    watchFiles: ['./src/*']
+  },
+
   module: {
     rules: [
       // Транспилируем js с babel
@@ -39,6 +43,7 @@ module.exports = {
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
           'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
+          'resolve-url-loader',
           'sass-loader', // compiles Sass to CSS, using Node Sass by default
         ],
       },
