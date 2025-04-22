@@ -1,0 +1,1 @@
+{"version":3,"file":"./js/bundle.js","mappings":"mBAEAA,QAAQC,IAAI,Y","sources":["webpack://web-project/./src/js/index.js"],"sourcesContent":["import '../scss/style.scss';\r\n\r\nconsole.log('Работает!');"],"names":["console","log"],"sourceRoot":""}
