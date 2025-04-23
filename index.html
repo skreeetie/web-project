@@ -7,7 +7,57 @@
 <script defer="defer" src="./js/bundle.js"></script><link href="style.css" rel="stylesheet"></head>
 <body>
   <header class="page-header">
-    <h2 class="title-h2 page-header__title">Пизда осла</h2>
+    <div class="page-header__top-wrapper">
+      <div class="page-header__left-wrapper">
+        <button class="page-header__button page-header--gap" id="burger-icon">
+          <img src="./img/burger-icon.svg" alt="Меню" width="18" height="16" class="burger-icon --vertical-align">
+        </button>
+        <div class="page-header__icon page-header--gap"></div>
+      </div>
+      <div class="page-header__divider page-header--gap"></div>
+      <button class="page-header__button page-header--gap" id="repair-icon">
+        <img src="./img/repair-icon.svg" alt="Оставить заявку" width="20" height="20" class="repair-icon --vertical-align">
+      </button>
+      <button class="page-header__button" id="search-icon">
+        <img src="./img/search-icon.svg" alt="Обратная связь" width="16" height="20" class="search-icon --vertical-align">
+      </button>
+    </div>
+    <nav class="page-header__sidebar --hidden">
+      <ul class="links-list">
+        <li class="highlight"></li>
+        <a href="#" class="link"><li class="links-list__item link--current">Ремонт техники</li></a>
+        <a href="#" class="link"><li class="links-list__item">Услуги и сервисы</li></a>
+        <a href="#" class="link"><li class="links-list__item">Корпоративным клиентам</li></a>
+        <a href="#" class="link"><li class="links-list__item">Продавцам техники</li></a>
+        <a href="#" class="link"><li class="links-list__item">Партнерам</li></a>
+        <a href="#" class="link"><li class="links-list__item">Производителям</li></a>
+        <a href="#" class="link"><li class="links-list__item">Наши сервисные центры</li></a>
+        <a href="#" class="link"><li class="links-list__item">Контакты</li></a>
+      </ul>
+      <div class="page-info">
+        <div class="info-links">
+          <button class="page-header__button page-header--gap">
+            <img src="./img/phone-icon.svg" alt="Позвонить" width="18" height="18" class="call-icon --vertical-align">
+          </button>
+          <button class="page-header__button page-header--gap">
+            <img src="./img/chat-icon.svg" alt="Написать в поддержку" width="20" height="20" class="chat-icon --vertical-align">
+          </button>
+          <button class="page-header__button">
+            <img src="./img/profile-icon.svg" alt="Профиль" width="20" height="19" class="profile-icon --vertical-align">
+          </button>
+        </div>
+        <a href="#" class="link email">mail@cps.com</a>
+        <p class="phone-number">8 800 890 8900</p>
+        <ul class="lang-list">
+          <a href="#" class="link"><li class="lang-list__item link--current">RU</li></a>
+          <a href="#" class="link"><li class="lang-list__item">EN</li></a>
+          <a href="#" class="link"><li class="lang-list__item">CH</li></a>
+        </ul>
+      </div>
+    </nav>
   </header>
+  <main class="page-main">
+    <div class="horizontal-line"></div>
+  </main>
 </body>
 </html>
