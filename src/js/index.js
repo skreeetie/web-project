@@ -88,6 +88,7 @@ function swiperCard() {
     if (!swiperInit) {
       swiper1 = new Swiper('.swiper-1', {
         direction: 'horizontal',
+        loop: true,
 
         pagination: {
           el: '.swiper-pagination',
