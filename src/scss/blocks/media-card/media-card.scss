@@ -1,0 +1,25 @@
+@use '../../variables.scss';
+
+.media-card {
+  position: relative;
+  padding: 16px;
+  width: 206.4px !important;
+  height: 126.4px;
+  border: 1px solid variables.$divider-color;
+  border-radius: 6px;
+  background-color: variables.$header-color;
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: variables.$default-color;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+}

@@ -82,6 +82,7 @@ burgerButton.addEventListener('click', function() {
 
 var swiperInit = false;
 var swiper1;
+var swiper2;
 
 function swiperCard() {
   if (window.innerWidth < 800) {
@@ -98,10 +99,24 @@ function swiperCard() {
         spaceBetween: 16,
         slidesPerView: 'auto',
       });
+
+      swiper2 = new Swiper('.swiper-2', {
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        spaceBetween: 16,
+        slidesPerView: 'auto',
+      });
       swiperInit = true;
     }
   } else if (swiperInit) {
     swiper1.destroy();
+    swiper2.destroy();
     swiperInit = false;
   }
 }
