@@ -1,0 +1,38 @@
+@use '../../variables.scss';
+
+.readmore {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+
+  &__highlight {
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../img/readmore-highlight.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;
+
+    &--rotated {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: variables.$default-color;
+  }
+}
