@@ -1,0 +1,10 @@
+@use '../../variables.scss';
+
+.price-card {
+  position: relative;
+  padding: 16px;
+  width: 228px;
+  height: 168px;
+  border-radius: 6px;
+  background-color: variables.$header-color;
+}

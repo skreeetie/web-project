@@ -1,0 +1,21 @@
+@use '../../variables.scss';
+
+.card-container {
+  margin-bottom: 16px;
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: variables.$current-color;
+  }
+
+  &__value {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: 0.01em;
+    color: variables.$default-color;
+  }
+}

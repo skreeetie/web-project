@@ -80,9 +80,33 @@ burgerButton.addEventListener('click', function() {
   }
 })
 
+let readMoreDisplay768 = document.querySelector('.--display--768--text');
+let readMoreDisplay1440 = document.querySelector('.--display--1440--text');
+let readMoreButton = document.querySelector('.readmore');
+let readMoreHightlight = readMoreButton.querySelector('.readmore__highlight');
+let readMoreText = readMoreButton.querySelector('.readmore__text');
+let readMoreInit = false;
+
+readMoreButton.addEventListener('click', function() {
+  if (!readMoreInit) {
+    readMoreDisplay768.classList.remove('--display--768--text');
+    readMoreDisplay1440.classList.remove('--display--1440--text');
+    readMoreHightlight.classList.add('readmore__highlight--rotated');
+    readMoreText.textContent = 'Скрыть';
+    readMoreInit = true;
+  } else {
+    readMoreDisplay768.classList.add('--display--768--text');
+    readMoreDisplay1440.classList.add('--display--1440--text');
+    readMoreHightlight.classList.remove('readmore__highlight--rotated');
+    readMoreText.textContent = 'Читать далее';
+    readMoreInit = false;
+  }
+})
+
 var swiperInit = false;
 var swiper1;
 var swiper2;
+var swiper3;
 
 function swiperCard() {
   if (window.innerWidth < 800) {
@@ -112,11 +136,25 @@ function swiperCard() {
         spaceBetween: 16,
         slidesPerView: 'auto',
       });
+
+      swiper3 = new Swiper('.swiper-3', {
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        spaceBetween: 16,
+        slidesPerView: 'auto',
+      });
       swiperInit = true;
     }
   } else if (swiperInit) {
     swiper1.destroy();
     swiper2.destroy();
+    swiper3.destroy();
     swiperInit = false;
   }
 }

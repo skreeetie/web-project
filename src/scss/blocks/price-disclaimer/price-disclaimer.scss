@@ -1,0 +1,15 @@
+@use '../../variables.scss';
+
+.price-disclaimer {
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-bottom: 24px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: -0.01em;
+    color: variables.$default-color;
+  }
+}

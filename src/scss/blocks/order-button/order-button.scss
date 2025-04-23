@@ -1,0 +1,44 @@
+@use '../../variables.scss';
+
+.order-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  border: none;
+  background-color: variables.$button-bg-color;
+  border-radius: 16px;
+  padding: 4px 14px;
+  width: 119px;
+  height: 32px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+
+    .order-button__send-icon {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__text-send {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: variables.$header-color;
+  }
+
+  &__send-icon {
+    width: 8px;
+    height: 10px;
+    background-image: url('../../../img/send-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform .3s ease-out;
+  }
+}
