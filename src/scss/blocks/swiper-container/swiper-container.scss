@@ -1,0 +1,18 @@
+@use '../../variables.scss';
+
+.swiper-container {
+  &__header {
+    height: fit-content;
+    padding: 16px;
+    background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: variables.$current-color;
+  }
+}

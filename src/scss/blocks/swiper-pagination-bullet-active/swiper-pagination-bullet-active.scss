@@ -1,0 +1,5 @@
+@use '../../variables.scss';
+
+.swiper-pagination-bullet-active {
+  background-color: variables.$placeholder-color;
+}

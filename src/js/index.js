@@ -79,3 +79,30 @@ burgerButton.addEventListener('click', function() {
     headerInit = false;
   }
 })
+
+var swiperInit = false;
+var swiper;
+
+function swiperCard() {
+  if (window.innerWidth < 800) {
+    if (!swiperInit) {
+      swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        spaceBetween: 16,
+        slidesPerView: 'auto',
+      });
+      swiperInit = true;
+    }
+  } else if (swiperInit) {
+    swiper.destroy();
+    swiperInit = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
