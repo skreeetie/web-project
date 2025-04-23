@@ -1,0 +1,22 @@
+@use '../../variables.scss';
+
+.links-list {
+  max-width: 290px;
+
+  &__item {
+    margin-left: 24px;
+    margin-bottom: 32px;
+    padding: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: variables.$default-color;
+    transition: all .3s ease-out;
+
+    &:hover {
+      color: variables.$hover-color;
+      transform: translateX(5px);
+    }
+  }
+}

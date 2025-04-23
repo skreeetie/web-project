@@ -1,0 +1,11 @@
+.page-info {
+  padding: 24px;
+  padding-bottom: 32px;
+  overflow: auto;
+
+  @media (min-height: 840px) {
+    position: absolute;
+    bottom: 0;
+    overflow: visible;
+  }
+}

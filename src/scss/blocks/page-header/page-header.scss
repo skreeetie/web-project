@@ -9,6 +9,11 @@
     padding: 24px 16px;
   }
 
+  &__left-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__button {
     border: none;
     background-color: variables.$button-bg-color;
@@ -35,6 +40,12 @@
     border-radius: 1px;
     width: 2px;
     height: 32px;
+  }
+
+  &__sidebar {
+    @media (min-height: 840px) {
+      height: 100vh;
+    }
   }
 
   &--gap {

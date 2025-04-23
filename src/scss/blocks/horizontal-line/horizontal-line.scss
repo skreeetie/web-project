@@ -1,0 +1,6 @@
+@use '../../variables.scss';
+
+.horizontal-line {
+  height: 1px;
+  background-color: variables.$line-color;
+}

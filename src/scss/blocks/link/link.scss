@@ -1,0 +1,14 @@
+@use '../../variables.scss';
+
+.link {
+  display: block;
+  width: fit-content;
+
+  &--current {
+    color: variables.$current-color;
+
+    &:hover {
+      @extend .link--current;
+    }
+  }
+}
