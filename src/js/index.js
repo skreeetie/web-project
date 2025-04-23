@@ -81,12 +81,12 @@ burgerButton.addEventListener('click', function() {
 })
 
 var swiperInit = false;
-var swiper;
+var swiper1;
 
 function swiperCard() {
   if (window.innerWidth < 800) {
     if (!swiperInit) {
-      swiper = new Swiper('.swiper', {
+      swiper1 = new Swiper('.swiper-1', {
         direction: 'horizontal',
 
         pagination: {
@@ -100,7 +100,7 @@ function swiperCard() {
       swiperInit = true;
     }
   } else if (swiperInit) {
-    swiper.destroy();
+    swiper1.destroy();
     swiperInit = false;
   }
 }

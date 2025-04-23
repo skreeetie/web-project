@@ -1,6 +1,8 @@
 @use '../../variables.scss';
 
 .swiper-container {
+  margin-bottom: 24px;
+  
   &__header {
     height: fit-content;
     padding: 16px;
