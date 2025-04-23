@@ -1,0 +1,26 @@
+@use '../../variables.scss';
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  &__highlight {
+    width: 4px;
+    height: 40px;
+    background-image: url('../../../img/highlight-title.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 12px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 143%;
+    letter-spacing: -0.02em;
+    color: variables.$default-color;
+    margin: 0;
+  }
+}

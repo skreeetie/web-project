@@ -9,8 +9,16 @@ let repairIcon = document.querySelector('#repair-icon');
 let searchButton = document.querySelector('#search-icon');
 let searchIcon = searchButton.querySelector('.search-icon');
 let headerDivider = topWrapper.querySelector('.page-header__divider');
+let feedbackModal = pageHeader.querySelector('.page-header__feedback');
+let callModal = pageHeader.querySelector('.page-header__order-call');
+let chatButton = headerSidebar.querySelector('#chat-icon');
+let callButton = headerSidebar.querySelector('#call-icon');
+let feedbackClose = feedbackModal.querySelector('.page-header__button');
+let callClose = callModal.querySelector('.page-header__button');
 let pageMain = document.querySelector('.page-main');
 let headerInit = false;
+let feedbackInit = false;
+let callInit = false;
 
 burgerButton.addEventListener('click', function() {
   if (!headerInit) {
@@ -27,6 +35,34 @@ burgerButton.addEventListener('click', function() {
     searchIcon.width = '18';
     searchIcon.height = '18';
     headerInit = true;
+    chatButton.addEventListener('click', function () {
+      if (!feedbackInit) {
+        topWrapper.classList.add('--hidden');
+        headerSidebar.classList.add('--hidden');
+        feedbackModal.classList.remove('--hidden');
+        feedbackInit = true;
+      }
+    })
+    feedbackClose.addEventListener('click', function() {
+      topWrapper.classList.remove('--hidden');
+      headerSidebar.classList.remove('--hidden');
+      feedbackModal.classList.add('--hidden');
+      feedbackInit = false;
+    })
+    callButton.addEventListener('click', function() {
+      if (!callInit) {
+        topWrapper.classList.add('--hidden');
+        headerSidebar.classList.add('--hidden');
+        callModal.classList.remove('--hidden');
+        callInit = true;
+      }
+    })
+    callClose.addEventListener('click', function() {
+      topWrapper.classList.remove('--hidden');
+      headerSidebar.classList.remove('--hidden');
+      callModal.classList.add('--hidden');
+      callInit = false;
+    })
   } else {
     headerSidebar.classList.add('--hidden');
     pageHeader.style.height = 'auto';
