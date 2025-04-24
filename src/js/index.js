@@ -82,11 +82,24 @@ burgerButton.addEventListener('click', function() {
     searchIcon.height = '18';
     headerInit = true;
     chatButton.addEventListener('click', function () {
-      if (!feedbackInit) {
-        topWrapper.classList.add('--hidden');
-        headerSidebar.classList.add('--hidden');
-        feedbackModal.classList.remove('--hidden');
-        feedbackInit = true;
+      if (swiperStyles.display === 'none') {
+        if (window.innerWidth < 768) {
+          if (!feedbackInit) {
+            topWrapper.classList.add('--hidden');
+            headerSidebar.classList.add('--hidden');
+            feedbackModal.classList.remove('--hidden');
+            feedbackInit = true;
+          }
+        }
+      } else {
+        if (window.innerWidth < 800) {
+          if (!feedbackInit) {
+            topWrapper.classList.add('--hidden');
+            headerSidebar.classList.add('--hidden');
+            feedbackModal.classList.remove('--hidden');
+            feedbackInit = true;
+          }
+        }
       }
     })
     feedbackClose.addEventListener('click', function() {
@@ -96,11 +109,24 @@ burgerButton.addEventListener('click', function() {
       feedbackInit = false;
     })
     callButton.addEventListener('click', function() {
-      if (!callInit) {
-        topWrapper.classList.add('--hidden');
-        headerSidebar.classList.add('--hidden');
-        callModal.classList.remove('--hidden');
-        callInit = true;
+      if (swiperStyles.display === 'none') {
+        if (window.innerWidth < 768) {
+          if (!callInit) {
+            topWrapper.classList.add('--hidden');
+            headerSidebar.classList.add('--hidden');
+            callModal.classList.remove('--hidden');
+            callInit = true;
+          }
+        }
+      } else {
+        if (window.innerWidth < 800) {
+          if (!callInit) {
+            topWrapper.classList.add('--hidden');
+            headerSidebar.classList.add('--hidden');
+            callModal.classList.remove('--hidden');
+            callInit = true;
+          }
+        }
       }
     })
     callClose.addEventListener('click', function() {
@@ -110,6 +136,34 @@ burgerButton.addEventListener('click', function() {
       callInit = false;
     })
   } else {
+    pageHeader.style.width = '100%';
+    pageHeader.style.position = 'static';
+    pageHeader.classList.remove('menu-shadow');
+    headerSidebar.classList.add('--hidden');
+    pageHeader.style.height = 'auto';
+    pageMain.classList.remove('--hidden');
+    pageMain.style.opacity = '1';
+    pageFooter.style.opacity = '1';
+    pageFooter.classList.remove('--hidden');
+    topWrapper.classList.remove('justify--space');
+    burgerIcon.src = './img/burger-icon.svg';
+    burgerIcon.width = '18';
+    burgerIcon.height = '16';
+    headerDivider.classList.remove('--hidden');
+    repairIcon.classList.remove('--hidden');
+    rightWrapperDivider.classList.remove('--hidden');
+    callHeaderButton.classList.remove('--hidden');
+    chatHeaderButton.classList.remove('--hidden');
+    profileHeaderButton.classList.remove('--hidden');
+    searchIcon.src = './img/search-icon.svg';
+    searchIcon.width = '16';
+    searchIcon.height = '20';
+    headerInit = false;
+  }
+})
+
+document.addEventListener('click', function(event) {
+  if (headerInit && !pageHeader.contains(event.target)) {
     pageHeader.style.width = '100%';
     pageHeader.style.position = 'static';
     pageHeader.classList.remove('menu-shadow');
