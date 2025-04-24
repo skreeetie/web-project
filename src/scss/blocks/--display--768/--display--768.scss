@@ -1,5 +1,15 @@
 .--display--768 {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+  
   &--text {
     display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 }

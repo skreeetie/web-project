@@ -2,6 +2,7 @@ import '../scss/style.scss';
 
 let pageHeader = document.querySelector('.page-header');
 let topWrapper = document.querySelector('.page-header__top-wrapper');
+let rightWrapper = topWrapper.querySelector('.page-header__right-wrapper');
 let headerSidebar = pageHeader.querySelector('.page-header__sidebar');
 let burgerButton = document.querySelector('#burger-icon');
 let burgerIcon = burgerButton.querySelector('.burger-icon');
@@ -9,6 +10,10 @@ let repairIcon = document.querySelector('#repair-icon');
 let searchButton = document.querySelector('#search-icon');
 let searchIcon = searchButton.querySelector('.search-icon');
 let headerDivider = topWrapper.querySelector('.page-header__divider');
+let rightWrapperDivider = rightWrapper.querySelector('.page-header__divider');
+let callHeaderButton = rightWrapper.querySelector('#call-header-icon');
+let chatHeaderButton = rightWrapper.querySelector('#chat-header-icon');
+let profileHeaderButton = rightWrapper.querySelector('#profile-header-icon');
 let feedbackModal = pageHeader.querySelector('.page-header__feedback');
 let callModal = pageHeader.querySelector('.page-header__order-call');
 let chatButton = headerSidebar.querySelector('#chat-icon');
@@ -20,19 +25,58 @@ let pageFooter = document.querySelector('.page-footer');
 let headerInit = false;
 let feedbackInit = false;
 let callInit = false;
+let swiperElement = document.querySelector('.swiper');
+let swiperStyles = window.getComputedStyle(swiperElement);
 
 burgerButton.addEventListener('click', function() {
   if (!headerInit) {
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth >= 768) {
+        pageHeader.classList.add('menu-shadow');
+        pageHeader.style.width = '320px';
+        pageHeader.style.position = 'fixed';
+        pageHeader.style.zIndex = '99';
+        pageHeader.style.top = '0';
+        pageHeader.style.left = '0';
+      }
+    }
     headerSidebar.classList.remove('--hidden');
     pageHeader.style.height = '100%';
-    pageMain.classList.add('--hidden');
-    pageFooter.classList.add('--hidden');
-    topWrapper.style.justifyContent = 'space-between';
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth < 768) {
+        pageMain.classList.add('--hidden');
+        pageFooter.classList.add('--hidden');
+      } else {
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+      }
+    } else {
+      if (window.innerWidth < 800) {
+        pageMain.classList.add('--hidden');
+        pageFooter.classList.add('--hidden');
+      } else {
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+      }
+    }
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth < 768) {
+        topWrapper.classList.add('justify--space');
+      }
+    } else {
+      if (window.innerWidth < 800) {
+        topWrapper.classList.add('justify--space');
+      }
+    }
     burgerIcon.src = './img/close-icon.svg';
     burgerIcon.width = '18';
     burgerIcon.height = '18';
     headerDivider.classList.add('--hidden');
     repairIcon.classList.add('--hidden');
+    rightWrapperDivider.classList.add('--hidden');
+    callHeaderButton.classList.add('--hidden');
+    chatHeaderButton.classList.add('--hidden');
+    profileHeaderButton.classList.add('--hidden');
     searchIcon.src = './img/menu-search-icon.svg';
     searchIcon.width = '18';
     searchIcon.height = '18';
@@ -66,16 +110,25 @@ burgerButton.addEventListener('click', function() {
       callInit = false;
     })
   } else {
+    pageHeader.style.width = '100%';
+    pageHeader.style.position = 'static';
+    pageHeader.classList.remove('menu-shadow');
     headerSidebar.classList.add('--hidden');
     pageHeader.style.height = 'auto';
     pageMain.classList.remove('--hidden');
+    pageMain.style.opacity = '1';
+    pageFooter.style.opacity = '1';
     pageFooter.classList.remove('--hidden');
-    topWrapper.style.justifyContent = 'flex-start';
+    topWrapper.classList.remove('justify--space');
     burgerIcon.src = './img/burger-icon.svg';
     burgerIcon.width = '18';
     burgerIcon.height = '16';
     headerDivider.classList.remove('--hidden');
     repairIcon.classList.remove('--hidden');
+    rightWrapperDivider.classList.remove('--hidden');
+    callHeaderButton.classList.remove('--hidden');
+    chatHeaderButton.classList.remove('--hidden');
+    profileHeaderButton.classList.remove('--hidden');
     searchIcon.src = './img/search-icon.svg';
     searchIcon.width = '16';
     searchIcon.height = '20';
