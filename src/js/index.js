@@ -190,6 +190,54 @@ document.addEventListener('click', function(event) {
   }
 })
 
+let tabletFeedbackModal = document.querySelector('.page-header__feedback-wrapper');
+let tabletFeedbackClose = tabletFeedbackModal.querySelector('.page-header__feedback--close');
+let tabletFeedbackInit = false;
+
+repairIcon.addEventListener('click', function() {
+  if (!tabletFeedbackInit) {
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth >= 768) {
+        tabletFeedbackModal.classList.remove('--hidden');
+        pageHeader.style.opacity = '0.04';
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+        tabletFeedbackInit = true;
+      }
+    } else {
+      if (window.innerWidth >= 800) {
+        tabletFeedbackModal.classList.remove('--hidden');
+        pageHeader.style.opacity = '0.04';
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+        tabletFeedbackInit = true;
+      }
+    }
+  }
+})
+
+tabletFeedbackClose.addEventListener('click', function() {
+  if (tabletFeedbackInit) {
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth >= 768) {
+        tabletFeedbackModal.classList.add('--hidden');
+        pageHeader.style.opacity = '1';
+        pageMain.style.opacity = '1';
+        pageFooter.style.opacity = '1';
+        tabletFeedbackInit = false;
+      }
+    } else {
+      if (window.innerWidth >= 768) {
+        tabletFeedbackModal.classList.add('--hidden');
+        pageHeader.style.opacity = '1';
+        pageMain.style.opacity = '1';
+        pageFooter.style.opacity = '1';
+        tabletFeedbackInit = false;
+      }
+    }
+  }
+})
+
 let readMoreDisplay768 = document.querySelector('.--display--768--text');
 let readMoreDisplay1440 = document.querySelector('.--display--1440--text');
 let readMoreButton = document.querySelector('.readmore');

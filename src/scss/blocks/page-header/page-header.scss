@@ -13,9 +13,29 @@
     }
   }
 
+  &__feedback-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background-color: variables.$header-color;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+  }
+
   &__feedback {
     @media (min-height: 620px) {
       height: 100vh;
+    }
+
+    @media (min-width: 768px) {
+      width: 440px;
+      position: relative;
+    }
+
+    &--close {
+      position: absolute;
+      top: 0;
+      left: -64px;
     }
   }
 
