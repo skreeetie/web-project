@@ -1,0 +1,37 @@
+@use '../../variables.scss';
+
+.page-footer {
+  margin-top: 60px;
+  
+  &__wrapper {
+    padding: 16px;
+    padding-top: 18px;
+    text-align: center;
+  }
+
+  &__copyright {
+    margin-bottom: 16px;
+  }
+
+  &__privacy {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: variables.$current-color;
+    opacity: 0.72;
+  }
+
+  &__link {
+    color: variables.$current-color;
+    transition: color .3s ease-out;
+
+    &:hover {
+      text-decoration: underline;
+      color: variables.$default-color;
+    }
+  }
+}

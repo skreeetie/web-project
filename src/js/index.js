@@ -16,6 +16,7 @@ let callButton = headerSidebar.querySelector('#call-icon');
 let feedbackClose = feedbackModal.querySelector('.page-header__button');
 let callClose = callModal.querySelector('.page-header__button');
 let pageMain = document.querySelector('.page-main');
+let pageFooter = document.querySelector('.page-footer');
 let headerInit = false;
 let feedbackInit = false;
 let callInit = false;
@@ -25,6 +26,7 @@ burgerButton.addEventListener('click', function() {
     headerSidebar.classList.remove('--hidden');
     pageHeader.style.height = '100%';
     pageMain.classList.add('--hidden');
+    pageFooter.classList.add('--hidden');
     topWrapper.style.justifyContent = 'space-between';
     burgerIcon.src = './img/close-icon.svg';
     burgerIcon.width = '18';
@@ -67,6 +69,7 @@ burgerButton.addEventListener('click', function() {
     headerSidebar.classList.add('--hidden');
     pageHeader.style.height = 'auto';
     pageMain.classList.remove('--hidden');
+    pageFooter.classList.remove('--hidden');
     topWrapper.style.justifyContent = 'flex-start';
     burgerIcon.src = './img/burger-icon.svg';
     burgerIcon.width = '18';

@@ -1,3 +1,16 @@
 .swiper-1 {
   height: 100px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    transform: translateX(-32px);
+    width: 24px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(270deg, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);
+  }
 }
