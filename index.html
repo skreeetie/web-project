@@ -8,31 +8,44 @@
   <title>Макетик</title>
 <script defer="defer" src="./js/bundle.js"></script><link href="style.css" rel="stylesheet"></head>
 <body>
+  <div class="page-header__display--right">
+    <label for="repair-icon-float" class="page-header__label">Оставить заявку</label>
+    <button class="page-header__button page-header--gap" id="repair-icon-float">
+      <img src="./img/repair-icon.svg" alt="Оставить заявку" width="20" height="20" class="repair-icon --vertical-align">
+    </button>
+    <label for="search-icon-float" class="page-header__label">Статус ремонта</label>
+    <button class="page-header__button" id="search-icon-float">
+      <img src="./img/search-icon.svg" alt="Обратная связь" width="16" height="20" class="search-icon --vertical-align">
+    </button>
+  </div>
   <header class="page-header">
     <div class="page-header__top-wrapper">
       <div class="page-header__left-wrapper">
-        <button class="page-header__button page-header--gap" id="burger-icon">
+        <button class="page-header__button page-header--gap page-header--display--1440" id="burger-icon">
           <img src="./img/burger-icon.svg" alt="Меню" width="18" height="16" class="burger-icon --vertical-align">
         </button>
-        <div class="page-header__divider page-header--gap --display--768"></div>
+        <div class="page-header__divider page-header--gap --display--768 page-header--display--1440"></div>
         <div class="page-header__icon page-header--gap"></div>
       </div>
       <div class="page-header__right-wrapper">
-        <button class="page-header__button page-header--gap --display--768" id="call-header-icon">
+        <button class="page-header__button page-header--gap --display--768 page-header--display--1440" id="call-header-icon">
           <img src="./img/phone-icon.svg" alt="Позвонить" width="18" height="18" class="call-icon --vertical-align">
         </button>
-        <button class="page-header__button page-header--gap --display--768" id="chat-header-icon">
+        <button class="page-header__button page-header--gap --display--768 page-header--display--1440" id="chat-header-icon">
           <img src="./img/chat-icon.svg" alt="Чат поддержки" width="20" height="20" class="chat-icon --vertical-align">
         </button>
-        <button class="page-header__button page-header--gap --display--768" id="profile-header-icon">
+        <button class="page-header__button page-header--gap --display--768 page-header--display--1440" id="profile-header-icon">
           <img src="./img/profile-icon.svg" alt="Профиль" width="20" height="19" class="profile-icon --vertical-align">
         </button>
-        <div class="page-header__divider page-header--gap"></div>
-        <button class="page-header__button page-header--gap" id="repair-icon">
+        <div class="page-header__divider page-header--gap page-header--display--1440"></div>
+        <button class="page-header__button page-header--gap page-header--display--1440" id="repair-icon">
           <img src="./img/repair-icon.svg" alt="Оставить заявку" width="20" height="20" class="repair-icon --vertical-align">
         </button>
-        <button class="page-header__button" id="search-icon">
+        <button class="page-header__button page-header--display--1440" id="search-icon">
           <img src="./img/search-icon.svg" alt="Обратная связь" width="16" height="20" class="search-icon --vertical-align">
+        </button>
+        <button class="page-header__button --display--1440">
+          <img src="./img/menu-search-icon.svg" alt="Поиск" width="18" height="18" class="menu-search-icon --vertical-align">
         </button>
       </div>
     </div>
@@ -165,7 +178,7 @@
     <div class="top-wrapper">
       <div class="title-wrapper">
         <div class="title-wrapper__highlight"></div>
-        <h2 class="title-wrapper__title">Обратная связь</h2>
+        <h2 class="title-wrapper__title">Услуги и сервисы</h2>
       </div>
     </div>
     <div class="fade-wrapper">
@@ -182,6 +195,7 @@
       <div class="b-content">
         <p class="b-content__text b-content--gap">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
         <p class="b-content__text --display--768--text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="--display--1440--text">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким</span></p>
+        <p class="b-content__text --display--text">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных, которое.</p>
         <button class="readmore">
           <div class="readmore__button">
             <div class="readmore__highlight"></div>
@@ -293,13 +307,13 @@
               <img src="./img/go-icon.svg" alt="Перейти" width="40" height="40" class="go-icon --vertical-align">
             </button>
           </div>
-          <div class="company-card cards-list__item --hidden">
+          <div class="company-card cards-list__item --hidden cards-list--display--1440">
             <img src="./img/acer-icon.png" alt="Acer" width="94" height="24" class="card-logo">
             <button class="go-button">
               <img src="./img/go-icon.svg" alt="Перейти" width="40" height="40" class="go-icon --vertical-align">
             </button>
           </div>
-          <div class="company-card cards-list__item --hidden">
+          <div class="company-card cards-list__item --hidden cards-list--display--1440">
             <img src="./img/sony-icon.png" alt="Sony" width="128" height="25.6" class="card-logo">
             <button class="go-button">
               <img src="./img/go-icon.svg" alt="Перейти" width="40" height="40" class="go-icon --vertical-align">
@@ -422,13 +436,13 @@
               <img src="./img/go-icon.svg" alt="Перейти" width="40" height="40" class="go-icon --vertical-align">
             </button>
           </div>
-          <div class="media-card cards-list__item --hidden">
+          <div class="media-card cards-list__item --hidden cards-list--display--1440">
             <p class="media-card__name">Ремонт звуковых карт</p>
             <button class="go-button media-card__button">
               <img src="./img/go-icon.svg" alt="Перейти" width="40" height="40" class="go-icon --vertical-align">
             </button>
           </div>
-          <div class="media-card cards-list__item --hidden">
+          <div class="media-card cards-list__item --hidden cards-list--display--1440">
             <p class="media-card__name">Ремонт пейджеров</p>
             <button class="go-button media-card__button">
               <img src="./img/go-icon.svg" alt="Перейти" width="40" height="40" class="go-icon --vertical-align">
