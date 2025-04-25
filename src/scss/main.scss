@@ -35,6 +35,18 @@ body {
   background-color: variables.$page-color;
 }
 
+.page-main {
+  @media (min-width: 1440px) {
+    margin-left: 320px;
+  }
+}
+
+.page-footer {
+  @media (min-width: 1440px) {
+    margin-left: 320px;
+  }
+}
+
 h2 {
   margin: 0;
 }

@@ -5,6 +5,13 @@
   overflow: auto;
   padding-left: 16px;
 
+  @media (min-width: 1440px) {
+    overflow: visible;
+    flex-wrap: wrap;
+    width: 1070px;
+    padding-left: 32px;
+  }
+
   &__item {
     padding: 10px 20px;
     font-size: 16px;

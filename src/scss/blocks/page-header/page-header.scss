@@ -3,6 +3,13 @@
 .page-header {
   background-color: variables.$header-color;
 
+  @media (min-width: 1440px) {
+    position: fixed !important;
+    width: 320px !important;
+    height: 100% !important;
+    z-index: 99 !important;
+  }
+
   &__top-wrapper {
     display: flex;
     align-items: center;
@@ -75,6 +82,32 @@
     align-items: center;
   }
 
+  &__display--right {
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 42px;
+      right: 30px;
+    }
+  }
+
+  &__label {
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: inline;
+      margin-right: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: variables.$default-color;
+    }
+  }
+
   &__button {
     border: none;
     background-color: variables.$button-bg-color;
@@ -107,9 +140,19 @@
     @media (min-height: 840px) {
       height: calc(100vh - 98px);
     }
+
+    @media (min-width: 1440px) {
+      display: block !important;
+    }
   }
 
   &--gap {
     margin-right: 16px;
+  }
+
+  &--display--1440 {
+    @media (min-width: 1440px) {
+      display: none !important;
+    }
   }
 }

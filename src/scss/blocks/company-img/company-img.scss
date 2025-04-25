@@ -15,4 +15,12 @@
     border-radius: 6px;
     margin-top: 0;
   }
+
+  @media (min-width: 1440px) {
+    width: 532px;
+    height: 307px;
+    background-image: url('../../../img/company--1120.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

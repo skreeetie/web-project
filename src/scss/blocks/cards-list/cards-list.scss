@@ -13,5 +13,15 @@
   &__item {
     flex-basis: 25%;
     margin-bottom: 16px;
+
+    @media (min-width: 1440px) {
+      flex-basis: 20%;
+    }
+  }
+
+  &--display--1440 {
+    @media (min-width: 1440px) {
+      display: flex !important;
+    }
   }
 }

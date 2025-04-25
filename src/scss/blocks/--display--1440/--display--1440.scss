@@ -1,5 +1,15 @@
 .--display--1440 {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+  
   &--text {
     display: none;
+
+    @media (min-width: 1440px) {
+      display: inline;
+    }
   }
 }

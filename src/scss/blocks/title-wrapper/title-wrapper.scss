@@ -6,6 +6,11 @@
   margin-top: 24px;
   margin-bottom: 24px;
 
+  @media (min-width: 1440px) {
+    margin-top: 42px;
+    margin-bottom: 8px;
+  }
+
   &__highlight {
     width: 4px;
     height: 40px;
@@ -13,6 +18,10 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 12px;
+
+    @media (min-width: 1440px) {
+      margin-right: 32px;
+    }
   }
 
   &__title {

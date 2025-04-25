@@ -216,6 +216,30 @@ repairIcon.addEventListener('click', function() {
   }
 })
 
+let reapirIconFloat = document.querySelector('#repair-icon-float');
+
+reapirIconFloat.addEventListener('click', function() {
+  if (!tabletFeedbackInit) {
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth >= 768) {
+        tabletFeedbackModal.classList.remove('--hidden');
+        pageHeader.style.opacity = '0.04';
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+        tabletFeedbackInit = true;
+      }
+    } else {
+      if (window.innerWidth >= 800) {
+        tabletFeedbackModal.classList.remove('--hidden');
+        pageHeader.style.opacity = '0.04';
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+        tabletFeedbackInit = true;
+      }
+    }
+  }
+})
+
 tabletFeedbackClose.addEventListener('click', function() {
   if (tabletFeedbackInit) {
     if (swiperStyles.display === 'none') {
@@ -239,7 +263,7 @@ tabletFeedbackClose.addEventListener('click', function() {
 })
 
 document.addEventListener('click', function(event) {
-  if (tabletFeedbackInit && !tabletFeedbackModal.contains(event.target) && !repairIcon.contains(event.target)) {
+  if (tabletFeedbackInit && !tabletFeedbackModal.contains(event.target) && !repairIcon.contains(event.target) && !reapirIconFloat.contains(event.target)) {
     if (swiperStyles.display === 'none') {
       if (window.innerWidth >= 768) {
         tabletFeedbackModal.classList.add('--hidden');
@@ -286,6 +310,30 @@ searchButton.addEventListener('click', function() {
   }
 })
 
+let searchButtonFloat = document.querySelector('#search-icon-float');
+
+searchButtonFloat.addEventListener('click', function() {
+  if (!tabletCallInit && !headerInit) {
+    if (swiperStyles.display === 'none') {
+      if (window.innerWidth >= 768) {
+        tabletCallModal.classList.remove('--hidden');
+        pageHeader.style.opacity = '0.04';
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+        tabletCallInit = true;
+      }
+    } else {
+      if (window.innerWidth >= 800) {
+        tabletCallModal.classList.remove('--hidden');
+        pageHeader.style.opacity = '0.04';
+        pageMain.style.opacity = '0.04';
+        pageFooter.style.opacity = '0.04';
+        tabletCallInit = true;
+      }
+    }
+  }
+})
+
 tabletCallClose.addEventListener('click', function() {
   if (tabletCallInit) {
     if (swiperStyles.display === 'none') {
@@ -309,7 +357,7 @@ tabletCallClose.addEventListener('click', function() {
 })
 
 document.addEventListener('click', function(event) {
-  if (tabletCallInit && !tabletCallModal.contains(event.target) && !searchButton.contains(event.target)) {
+  if (tabletCallInit && !tabletCallModal.contains(event.target) && !searchButton.contains(event.target) && !searchButtonFloat.contains(event.target)) {
     if (swiperStyles.display === 'none') {
       if (window.innerWidth >= 768) {
         tabletCallModal.classList.add('--hidden');
@@ -332,6 +380,7 @@ document.addEventListener('click', function(event) {
 
 let readMoreDisplay768 = document.querySelector('.--display--768--text');
 let readMoreDisplay1440 = document.querySelector('.--display--1440--text');
+let readMoreDisplayText = document.querySelector('.--display--text');
 let readMoreButton = document.querySelector('.readmore');
 let readMoreHightlight = readMoreButton.querySelector('.readmore__highlight');
 let readMoreText = readMoreButton.querySelector('.readmore__text');
@@ -340,13 +389,17 @@ let readMoreInit = false;
 readMoreButton.addEventListener('click', function() {
   if (!readMoreInit) {
     readMoreDisplay768.classList.remove('--display--768--text');
+    readMoreDisplay768.classList.add('b-content--gap');
     readMoreDisplay1440.classList.remove('--display--1440--text');
+    readMoreDisplayText.classList.remove('--display--text');
     readMoreHightlight.classList.add('readmore__highlight--rotated');
     readMoreText.textContent = 'Скрыть';
     readMoreInit = true;
   } else {
     readMoreDisplay768.classList.add('--display--768--text');
+    readMoreDisplay768.classList.remove('b-content--gap');
     readMoreDisplay1440.classList.add('--display--1440--text');
+    readMoreDisplayText.classList.add('--display--text');
     readMoreHightlight.classList.remove('readmore__highlight--rotated');
     readMoreText.textContent = 'Читать далее';
     readMoreInit = false;
