@@ -378,6 +378,31 @@ companiesMoreButton.addEventListener('click', function() {
   }
 })
 
+let mediasSection = document.querySelector('#medias-section');
+let mediasHidden = mediasSection.querySelectorAll('.--hidden');
+let mediasMoreButton = mediasSection.querySelector('#media-card--show');
+let mediasMoreHighlight = mediasMoreButton.querySelector('.readmore__highlight');
+let mediasMoreText = mediasMoreButton.querySelector('.readmore__text');
+let mediasInit = false;
+
+mediasMoreButton.addEventListener('click', function() {
+  if (!mediasInit) {
+    mediasMoreHighlight.classList.add('readmore__highlight--rotated');
+    mediasMoreText.textContent = 'Скрыть';
+    for (let i = 0; i < mediasHidden.length; i++) {
+      mediasHidden[i].classList.remove('--hidden');
+    }
+    mediasInit = true;
+  } else {
+    mediasMoreHighlight.classList.remove('readmore__highlight--rotated');
+    mediasMoreText.textContent = 'Показать все';
+    for (let i = 0; i < mediasHidden.length; i++) {
+      mediasHidden[i].classList.add('--hidden');
+    }
+    mediasInit = false;
+  }
+})
+
 var swiperInit = false;
 var swiper1;
 var swiper2;
