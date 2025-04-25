@@ -7,14 +7,36 @@
     padding: 16px;
     padding-top: 18px;
     text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 24px;
+      padding-top: 36px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__copyright {
     margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      text-align: left;
+      margin-right: 16px;
+    }
   }
 
   &__privacy {
     margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-right: 16px;
+    }
+  }
+
+  &__disclaimer {
+    @media (min-width: 768px) {
+      text-align: right;
+    }
   }
 
   &__text {

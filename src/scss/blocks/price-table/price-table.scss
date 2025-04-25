@@ -1,0 +1,70 @@
+@use '../../variables.scss';
+
+.price-table {
+  width: 100%;
+  border-spacing: 0;
+
+  &__header-data {
+    text-align: left;
+    padding: 16px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: variables.$current-color;
+    opacity: 0.72;
+  }
+
+  &__content-row {
+    &:first-child {
+      .price-table__content-data:first-child {
+        border-top-left-radius: 6px;
+      }
+
+      .price-table__content-data:last-child {
+        border-top-right-radius: 6px;
+      }
+    }
+
+    &:last-child {
+      .price-table__content-data:first-child {
+        border-bottom-left-radius: 6px;
+      }
+
+      .price-table__content-data:last-child {
+        border-bottom-right-radius: 6px;
+      }
+    }
+  }
+
+  &__content {
+    background-color: variables.$header-color;
+
+    &--align {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__content-row {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      width: calc(100% - 32px);
+      height: 1px;
+      background: variables.$divider-color no-repeat center;
+    }
+  }
+
+  &__content-data {
+    padding: 16px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.01em;
+    color: variables.$default-color;
+  }
+}

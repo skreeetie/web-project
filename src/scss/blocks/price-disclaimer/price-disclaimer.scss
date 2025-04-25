@@ -5,6 +5,10 @@
   padding-left: 16px;
   margin-bottom: 24px;
 
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+
   &__text {
     font-weight: 400;
     font-size: 14px;

@@ -41,4 +41,8 @@
     background-position: center;
     transition: transform .3s ease-out;
   }
+
+  &--static {
+    position: static;
+  }
 }
