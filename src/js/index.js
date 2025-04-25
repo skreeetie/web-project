@@ -353,6 +353,31 @@ readMoreButton.addEventListener('click', function() {
   }
 })
 
+let companiesSection = document.querySelector('#companies-section');
+let companiesHidden = companiesSection.querySelectorAll('.--hidden');
+let companiesMoreButton = companiesSection.querySelector('#company-card--show');
+let companiesMoreHighlight = companiesMoreButton.querySelector('.readmore__highlight');
+let companiesMoreText = companiesMoreButton.querySelector('.readmore__text');
+let companiesInit = false;
+
+companiesMoreButton.addEventListener('click', function() {
+  if (!companiesInit) {
+    companiesMoreHighlight.classList.add('readmore__highlight--rotated');
+    companiesMoreText.textContent = 'Скрыть';
+    for (let i = 0; i < companiesHidden.length; i++) {
+      companiesHidden[i].classList.remove('--hidden');
+    }
+    companiesInit = true;
+  } else {
+    companiesMoreHighlight.classList.remove('readmore__highlight--rotated');
+    companiesMoreText.textContent = 'Показать все';
+    for (let i = 0; i < companiesHidden.length; i++) {
+      companiesHidden[i].classList.add('--hidden');
+    }
+    companiesInit = false;
+  }
+})
+
 var swiperInit = false;
 var swiper1;
 var swiper2;

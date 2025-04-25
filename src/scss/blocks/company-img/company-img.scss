@@ -5,4 +5,14 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 16px;
+
+  @media (min-width: 768px) {
+    width: 360px;
+    height: 208px;
+    background-image: url('../../../img/company--768.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    margin-top: 0;
+  }
 }

@@ -1,3 +1,12 @@
 .b-flex {
   margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 16px;
+    padding-bottom: 0;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
 }
